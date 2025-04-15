@@ -1,0 +1,24 @@
+.launch--section {
+  .header {
+    font-size: 4rem;
+  }
+  .countdown {
+    &--date {
+      text-align: center;
+      //   width: 8vw;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+      div {
+        font-size: 5rem;
+        // height: 30vh;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

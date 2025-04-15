@@ -1,0 +1,95 @@
+.launch--section {
+  color: #fff;
+  .header {
+    margin-bottom: 4rem;
+  }
+
+  .countdown--date {
+    .countdown-segment {
+      position: relative;
+      height: 100%;
+      width: 100px;
+
+      .segment__display {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        height: 20vh;
+        width: 100%;
+        color: transparent;
+
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .segment__overlay {
+        position: absolute;
+        top: 0;
+        perspective: 400px;
+        height: 100%;
+        width: 100px;
+      }
+
+      .segment__overlay--top,
+      .segment__overlay--bottom {
+        position: absolute;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        height: 49%;
+      }
+
+      .segment__overlay--top {
+        top: 0;
+        line-height: 2.6;
+        color: $secondary-bg;
+        background: $primary-bg;
+        transform-origin: bottom;
+        transition: all 0.5s;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+
+      .segment__overlay--bottom {
+        bottom: 0;
+        line-height: 0;
+        color: $secondary-bg;
+        background-color: #333;
+        transition: all 0.5s;
+        transform-origin: top;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+.flip--top {
+  animation: flip-top 0.5s linear;
+}
+
+.flip--bottom {
+  animation: flip-bottom 0.5s linear;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}

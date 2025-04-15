@@ -1,0 +1,37 @@
+.container--main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.launch--section {
+  border: 1px solid red;
+  height: 70vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown {
+  display: flex;
+}
+
+.media--footer {
+  border: 1px solid green;
+  height: 30vh;
+  width: 100%;
+  background-image: url(../images/pattern-hills.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}

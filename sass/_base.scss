@@ -1,0 +1,36 @@
+//COLOR BG
+$general-bg: hsl(235, 16%, 14%);
+$primary-bg: hsl(236, 21%, 26%);
+$secondary-bg: hsl(345, 95%, 68%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //10px === 1rem
+}
+
+body {
+  position: relative;
+}
+
+.container--main {
+  background-image: url(../images/bg-stars.svg);
+  background-color: $general-bg;
+  height: 100vh;
+}
+
+// .footer-img-bg {
+//   position: absolute;
+//   top: 70%;
+//   left: 0;
+
+//   img {
+//     width: 100%;
+//   }
+// }
