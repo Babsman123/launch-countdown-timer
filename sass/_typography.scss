@@ -1,6 +1,8 @@
 .launch--section {
   .header {
     font-size: 4rem;
+    text-transform: capitalize;
+    text-align: center;
   }
   .countdown {
     &--date {
@@ -17,8 +19,29 @@
 
       p {
         font-size: 1.5rem;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
+        text-transform: uppercase;
       }
     }
+
+    .segment__overlay--top,
+    .segment__overlay--bottom {
+      font-size: 6rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.overlay {
+  &__header {
+    color: #fff;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-weight: 600;
   }
 }

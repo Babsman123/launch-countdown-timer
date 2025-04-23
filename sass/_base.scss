@@ -2,6 +2,14 @@
 $general-bg: hsl(235, 16%, 14%);
 $primary-bg: hsl(236, 21%, 26%);
 $secondary-bg: hsl(345, 95%, 68%);
+$dark-blue-bg: hsl(234, 17%, 12%);
+$grayish-bg: hsla(237, 18%, 59%, 0.344);
+
+//RESPONSIVE BREAKPOINT
+$bp-largest: 75em; //1200px/16px (1200px)
+$bp-large: 62.5em; //1000px/16px (1000px)
+$bp-medium: 50em; //800px/16px (800px)
+$bp-small: 37.5em; //600px/16px (600px)
 
 *,
 *::before,
@@ -13,6 +21,10 @@ $secondary-bg: hsl(345, 95%, 68%);
 
 html {
   font-size: 62.5%; //10px === 1rem
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 8px/16px 1rem = 8px
+  }
 }
 
 body {

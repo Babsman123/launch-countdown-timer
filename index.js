@@ -56,11 +56,17 @@ const countdownMinute = document.querySelector(".segment__display--minute");
 const countdownHour = document.querySelector(".segment__display--hour");
 const countdownDay = document.querySelector(".segment__display--day");
 
+//BUTTON INIT
+const overlayInit = document.querySelector(".overlay");
+const btnStart = document.querySelector(".btn");
+const inputLaunchNumber = document.querySelector(".input--num");
+let newValue;
+
 // const countdownTop = document.querySelector(".segment__overlay--top");
 // const countdownBottom = document.querySelector(".segment__overlay--bottom");
 
 const startCoundownDate = function () {
-  let timer = 24 * 60 * 60; // 24 hours in seconds
+  let timer = Number(newValue) * 24 * 60 * 60; // 24 hours in seconds
 
   // Select each countdown segment once
   const countdownDay = document.querySelector(".countdown__day");
@@ -80,17 +86,18 @@ const startCoundownDate = function () {
 
     if (display.textContent !== newValue) {
       // Set new values in overlays for animation
-      console.log(display);
       display.textContent = newValue;
       top.textContent = newValue;
       bottom.textContent = newValue;
 
+      // top.classList.add("flip--top");
       bottom.classList.add("flip--bottom");
 
       // Add animation class
 
       // After the animation duration, update the main display
       setTimeout(() => {
+        // top.classList.remove("flip--top");
         bottom.classList.remove("flip--bottom");
       }, 500); // Match with CSS animation duration
     }
@@ -121,4 +128,17 @@ const startCoundownDate = function () {
   }, 1000);
 };
 
-startCoundownDate();
+//INITIALIAZTION BUTTON
+const startCount = function () {
+  if (inputLaunchNumber.value <= 0 || inputLaunchNumber.value === 0) {
+    alert("Kindly input valid number");
+  } else {
+    newValue = inputLaunchNumber.value;
+    overlayInit.classList.add("hidden");
+    console.log(overlayInit);
+    startCoundownDate();
+    console.log(newValue);
+  }
+};
+
+btnStart.addEventListener("click", startCount);

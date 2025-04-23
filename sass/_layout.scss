@@ -6,7 +6,6 @@
 }
 
 .launch--section {
-  border: 1px solid red;
   height: 70vh;
   width: 100%;
 
@@ -21,7 +20,6 @@
 }
 
 .media--footer {
-  border: 1px solid green;
   height: 30vh;
   width: 100%;
   background-image: url(../images/pattern-hills.svg);
@@ -33,5 +31,31 @@
     &:not(:last-child) {
       margin-right: 2.5rem;
     }
+  }
+}
+
+//OVERLAY QUESTION
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  // display: none;
+
+  &--launch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  &__question {
+    display: flex;
+    flex-direction: column;
   }
 }
